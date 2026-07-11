@@ -1,0 +1,67 @@
+To build this service, we will first need to create an Employee class in Java Spring Boot. This class will include private variables for each field: first_name, last_name, employee_id, email, and title. It will also contain getter and setter methods for each variable. Additionally, we will need a structure or a repository class to manage the full list of employees.
+
+Next, we will create a Controller class. This class is responsible for handling database interactions using standard HTTP commands. Users will send a GET command to acquire the full list of user data, while the POST command will be used to add an individual user. Furthermore, the DELETE command will remove an entry, and the PUT command will be used to update an existing entry.
+
+To get the full list of employees, sending a GET request to the service will return a response in this format:
+
+
+
+{
+
+ "Employees": [
+
+   {
+
+     "employee_id": "string",
+
+     "first_name": "string",
+
+     "last_name": "string",
+
+     "email": "string",
+
+     "title": "string"
+
+   },
+
+   {
+
+     "employee_id": "string",
+
+     "first_name": "string",
+
+     "last_name": "string",
+
+     "email": "string",
+
+     "title": "string"
+
+   }
+
+ ]
+
+}
+
+
+
+For individual employee operations, we can send the POST command to add a new employee, the DELETE command to remove them, and the PUT command to update an employee's details. These requests will be structured with the following payload:
+
+
+
+{
+
+ "employee_id": "string",
+
+ "first_name": "string",
+
+ "last_name": "string",
+
+ "email": "string",
+
+ "title": "string"
+
+}
+
+Finally, we need to host this data securely. The HPE GreenLake Cloud Platform will be utilized for this purpose. With GreenLake, we can host our data privately on-premises using the architecture the platform provides. It delivers a cloud-native infrastructure that makes it possible to deploy and manage resources locally at a low cost.
+
+ 
